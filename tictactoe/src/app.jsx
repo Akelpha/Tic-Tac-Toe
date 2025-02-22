@@ -4,7 +4,7 @@ function Square({value, onSquareClick}) {
     
     return <button className="justify-center items-center w-16 h-16 bg-white border border-black text-4xl font-bold" onClick={onSquareClick}>{value}</button>;
   }
-export default function Board() {
+function Board() {
     const [xIsNext, setXIsNext] = useState(true);
     const [squares,setSquares] = useState(Array(9).fill(null));
     function handleClick(i) {
@@ -19,10 +19,17 @@ export default function Board() {
         }
         setSquares(nextSquares);
         setXIsNext(!xIsNext);
-        
+      }
+      const winner = calculateWinner(squares);
+      let status;
+      if(winner){
+        status = "Winner: " + winner;
+      }else{
+        status = 'Next player: ' + (xIsNext ? 'X' : 'O');
       }
     return(
-        
+        <>
+        <div className="text-2xl font-bold">{status}</div>
         <div className="flex justify-center items-center h-screen">
             
             <div>
@@ -42,7 +49,8 @@ export default function Board() {
                     <Square value={squares[8]} onSquareClick={() => handleClick(8)}/>
                 </div>
             </div>
-        </div>
+        </div></>
+        
     )
 }
 function calculateWinner(squares){
@@ -64,4 +72,21 @@ function calculateWinner(squares){
 
     }
     return null;
+}
+
+export default function TicTacToe() {
+    const [xIsNext, setXIsNext] = useState(true);
+    const [history,setHistory] = useState(Array(9).fill(null));
+    const currentSquares = history[history.length - 1];
+return(
+    <div>
+        <div>
+        <Board />
+        </div>
+        <div>
+            <ol></ol>
+        </div>
+    </div>
+
+)
 }
