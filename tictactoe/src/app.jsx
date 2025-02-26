@@ -81,7 +81,7 @@ export default function TicTacToe() {
       </li>
     );
   });
-
+  console.log("currentSquares:", currentSquares);
   return (
     <div>
       <div>

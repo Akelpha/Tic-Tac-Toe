@@ -1,6 +1,5 @@
 @import "tailwindcss";
 body {
-  background: url("./assets/backgroundTicTacToe.svg") center fixed;
-  background-size: cover;
+  background: url("./assets/tictactoeback.png") fixed;
   overflow-y: hidden;
 }
