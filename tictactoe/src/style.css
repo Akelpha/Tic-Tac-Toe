@@ -1,5 +1,10 @@
 @import "tailwindcss";
-body {
+/* body {
   background: url("./assets/tictactoeback.png") fixed;
   overflow-y: hidden;
-}
+} */
+/* @layer components {
+  .board-row::after {
+    @apply clear-both content-[''] table;
+  }
+} */
