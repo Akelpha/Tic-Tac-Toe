@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.persolal-cursor {
+  cursor: url("./assets/cursor.svg"), auto;
+}
