@@ -25,7 +25,7 @@ function Board({ xIsNext, squares, onPlay }) {
   }
 
   const winner = calculateWinner(squares);
-  const loser = calculateWinner(squares) === null;
+  const loser = !winner && squares.every((square) => square !== null);
   let status;
   if (winner) {
     status = "Winner: " + winner;
