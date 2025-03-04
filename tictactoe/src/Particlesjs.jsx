@@ -1,11 +1,11 @@
 import React from "react";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
+import Particles from "@tsparticles/react";
+import { loadFull } from "@tsparticles/engine";
 
-const ParticlesBackground = () => {
-  const particlesInit = async (main) => {
-    await loadFull(main);
-  };
+export default function ParticlesBackground() {
+  const particlesInit = useCallback(async (engine) => {
+    await loadFull(engine);
+  }, []);
 
   return (
     <Particles
@@ -129,6 +129,4 @@ const ParticlesBackground = () => {
       }}
     />
   );
-};
-
-export default ParticlesBackground;
+}
