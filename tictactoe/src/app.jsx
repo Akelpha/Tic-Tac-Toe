@@ -1,5 +1,4 @@
 import { useState } from "react";
-import ParticlesBackground from "./Particlesjs";
 
 function Square({ value, onSquareClick }) {
   return (
@@ -94,55 +93,23 @@ export default function TicTacToe() {
       </li>
     );
   });
-  function App() {
-    return (
-      <div
-        style={{ position: "relative", height: "100vh", overflow: "hidden" }}>
-        <ParticlesBackground />
-        <div
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            textAlign: "center",
-            color: "white",
-          }}>
-          <h1>Bienvenue sur mon site avec Particles.js</h1>
-        </div>
-      </div>
-    );
-  }
+
   return (
-    <div>
-      <div className="flex justify-center items-center h-screen">
-        <div
-          style={{ position: "relative", height: "100vh", overflow: "hidden" }}>
-          <ParticlesBackground />
-          <div
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              textAlign: "center",
-              color: "white",
-            }}>
-            <Board
-              xIsNext={xIsNext}
-              squares={currentSquares}
-              onPlay={handlePlay}
-            />
-          </div>
+    <div className="flex flex-row justify-center items-center h-screen relative z-10">
+      <div className="flex justify-center items-center ">
+        <div className="text-center">
+          <Board
+            xIsNext={xIsNext}
+            squares={currentSquares}
+            onPlay={handlePlay}
+          />
         </div>
       </div>
-      <div className="m-[20px] ">
+      <div className="m-[20px]">
         <ol className="p-[10px]">{moves}</ol>
       </div>
     </div>
   );
-
-  /******  65257781-7df8-4eed-9c94-332f8e5a3914  *******/
 }
 
 function calculateWinner(squares) {
