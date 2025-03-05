@@ -12,6 +12,9 @@ export default function ParticlesBackground() {
       id="tsparticles"
       init={particlesInit}
       options={{
+        background: {
+          color: "#000000",
+        },
         particles: {
           number: {
             value: 199,
