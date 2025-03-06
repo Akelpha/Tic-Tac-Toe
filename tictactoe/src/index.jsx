@@ -11,7 +11,6 @@ root.render(
     <div className="absolute top-0 left-0 w-full h-full z-[-1]">
       <ParticlesBackground />
     </div>
-
     <App />
   </StrictMode>
 );
