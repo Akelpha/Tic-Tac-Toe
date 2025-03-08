@@ -30,7 +30,7 @@ const App = () => {
     autoPlay: true,
     background: {
       color: {
-        value: "#ffffff",
+        value: "#00000",
       },
       image: "",
       position: "",
@@ -62,8 +62,8 @@ const App = () => {
       detectsOn: "window",
       events: {
         onClick: {
-          enable: false,
-          mode: [],
+          enable: true,
+          mode: "push",
         },
         onDiv: {
           selectors: [],
@@ -73,7 +73,7 @@ const App = () => {
         },
         onHover: {
           enable: true,
-          mode: "trail",
+          mode: "repulse",
           parallax: {
             enable: false,
             force: 2,
@@ -249,12 +249,12 @@ const App = () => {
         },
       },
       color: {
-        value: "#ff000d",
+        value: "#ff0000",
         animation: {
           h: {
             count: 0,
-            enable: true,
-            speed: 50,
+            enable: false,
+            speed: 1,
             decay: 0,
             delay: 0,
             sync: false,
@@ -358,7 +358,7 @@ const App = () => {
           mode: "delete",
           value: 0,
         },
-        value: 100,
+        value: 250,
       },
       opacity: {
         value: {
@@ -393,7 +393,7 @@ const App = () => {
         close: true,
         fill: true,
         options: {},
-        type: "circle",
+        type: "cercle",
       },
       size: {
         value: {

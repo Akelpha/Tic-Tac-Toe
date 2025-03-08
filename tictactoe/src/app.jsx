@@ -39,17 +39,17 @@ function Board({ xIsNext, squares, onPlay }) {
   return (
     <>
       <div className="mt-[20px] mb-[20px] text-center font-bold">{status}</div>
-      <div className="flex flex-row w-full board-row board-row ">
+      <div className="flex flex-row w-full ">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
         <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
       </div>
-      <div className="flex flex-row w-full board-row board-row">
+      <div className="flex flex-row w-full ">
         <Square value={squares[3]} onSquareClick={() => handleClick(3)} />
         <Square value={squares[4]} onSquareClick={() => handleClick(4)} />
         <Square value={squares[5]} onSquareClick={() => handleClick(5)} />
       </div>
-      <div className="flex flex-row w-full board-row board-row">
+      <div className="flex flex-row w-full ">
         <Square value={squares[6]} onSquareClick={() => handleClick(6)} />
         <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
@@ -95,7 +95,7 @@ export default function TicTacToe() {
   });
 
   return (
-    <div className="flex flex-row justify-center items-center h-screen relative z-10">
+    <div className="flex flex-row justify-center items-center h-screen ">
       <div className="flex justify-center items-center ">
         <div className="text-center">
           <Board
