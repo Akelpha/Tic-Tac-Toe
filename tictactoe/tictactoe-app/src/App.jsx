@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+// eslint-disable-next-line react/prop-types
 function Square({ value, onSquareClick }) {
   return (
     <button
@@ -10,11 +11,13 @@ function Square({ value, onSquareClick }) {
   );
 }
 
+// eslint-disable-next-line react/prop-types
 function Board({ xIsNext, squares, onPlay }) {
   function handleClick(i) {
     if (calculateWinner(squares) || squares[i]) {
       return;
     }
+    // eslint-disable-next-line react/prop-types
     const nextSquares = squares.slice();
     if (xIsNext) {
       nextSquares[i] = "▲";
@@ -26,6 +29,7 @@ function Board({ xIsNext, squares, onPlay }) {
 
   const winner = calculateWinner(squares);
 
+  // eslint-disable-next-line react/prop-types
   const loser = !winner && squares.every((square) => square !== null);
   let status;
   if (winner) {
