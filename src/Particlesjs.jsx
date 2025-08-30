@@ -92,7 +92,7 @@ const App = () => {
           quantity: 5,
           particles: {
             color: {
-              value: "#ff0000",
+              value: "rgba(255, 0, 0, 1)",
               animation: {
                 enable: true,
                 speed: 400,
